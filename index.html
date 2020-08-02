@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="theme-color" content="#fafafa">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <main>
+    <form class="form" id="searchForm">
+      <input required class="form__field" value="mountain" type="text" id="searchField" placeholder="Search...">
+      <button class="form__button" type="submit" id="searchButton"><svg class="icon"><use xlink:href="#icon-search" /></svg></button>
+    </form>
+    <div class="result-wrap">
+      <div class="no-results js-404">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="96" height="96" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="none" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none" fill-rule="nonzero"></path><g><path d="M104.44659,114.55238l10.13249,-10.13284l43.08294,43.08144l-10.13249,10.13284z" fill="#616161" fill-rule="nonzero"></path><path d="M71.55558,14.26167c-31.66433,0 -57.33333,25.66901 -57.33333,57.33333c0,31.66433 25.66901,57.33333 57.33333,57.33333c31.66433,0 57.33333,-25.66901 57.33333,-57.33333c0,-31.66433 -25.66901,-57.33333 -57.33333,-57.33333z" fill="#616161" fill-rule="nonzero"></path><path d="M116.1861,126.56761l10.13249,-10.13284l31.16374,31.16265l-10.13249,10.13284z" fill="#36474f" fill-rule="nonzero"></path><path d="M71.55558,25.01167c-25.72726,0 -46.58333,20.85607 -46.58333,46.58333c0,25.72726 20.85607,46.58333 46.58333,46.58333c25.72726,0 46.58333,-20.85607 46.58333,-46.58333c0,-25.72726 -20.85607,-46.58333 -46.58333,-46.58333z" fill="#5fb3f9" fill-rule="nonzero"></path><path d="M95.90433,90.60817c-5.96267,-7.36017 -14.73825,-11.77483 -24.21258,-11.77483c-9.47433,0 -18.24633,4.41467 -24.21258,11.77483c-1.41183,1.47992 -1.05708,4.05633 0.344,5.16c1.41183,1.46917 3.86283,1.09292 4.91992,-0.37267c4.90558,-5.89817 11.49533,-9.3525 18.87342,-9.3525c7.37808,0 14.11117,3.45433 19.02033,9.3525c0.71308,0.731 2.86308,2.18583 4.9235,0.731c1.6555,-1.161 1.40108,-4.03483 0.344,-5.51833z" fill="#f5f5f5" fill-rule="nonzero"></path><path d="M51.95833,53.75c-2.96853,0 -5.375,2.40647 -5.375,5.375c0,2.96853 2.40647,5.375 5.375,5.375c2.96853,0 5.375,-2.40647 5.375,-5.375c0,-2.96853 -2.40647,-5.375 -5.375,-5.375zM91.375,53.75c-2.96853,0 -5.375,2.40647 -5.375,5.375c0,2.96853 2.40647,5.375 5.375,5.375c2.96853,0 5.375,-2.40647 5.375,-5.375c0,-2.96853 -2.40647,-5.375 -5.375,-5.375z" fill="#f5f5f5" fill-rule="evenodd"></path></g></g></svg>
+        <p>No definition found for your search, please try a different word.</p>
+      </div>
+      <svg class="js-loader loader" xmlns="http://www.w3.org/2000/svg" style="margin:auto;background:#fff" width="200" height="200" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" display="block"><path d="M10 50a40 40 0 0 0 80 0 40 42 0 0 1-80 0" fill="#82D2D4"><animateTransform attributeName="transform" type="rotate" dur="1s" repeatCount="indefinite" keyTimes="0;1" values="0 50 51;360 50 51"/></path></svg>
+      <div class="result">
+        <h2 class="result__word"></h2>
+        <p class="result__pronunciation"></p>
+        <div class="result__definitions"></div>
+      </div> 
+    </div>
+  </main>
+  <footer class="footer">
+    <p>Free dictionary API by <a target="_blank" href="https://owlbot.info/">Owl bot</a></p>
+    <p>Made with ❤️ by <a target="_blank" href="https://github.com/daniloparrajr">Danilo Parra Jr.</a></p>
+    <p>Free icons by <a target="_blank" href="https://icons8.com/">Icons8</a></p>
+  </footer>
+  <template id="resultTemplate">
+    <div class="result__definition-item">
+      <div class="result__text">
+        <p class="result__type"></p>
+        <p class="result__definition"></p>
+        <p class="result__example"></p>
+      </div>
+      <img class="result__image" src="" alt="">
+    </div>
+  </template>
+  <!-- https://css-tricks.com/svg-symbol-good-choice-icons/ -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">    
+    <symbol id="icon-search" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+  </svg>
+</body>
+</html>
